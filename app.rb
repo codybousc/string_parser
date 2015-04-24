@@ -1,6 +1,6 @@
 require('sinatra')
 require('sinatra/reloader')
-require('./lib/coin_combo')
+require('./lib/string_parse')
 also_reload('lib/**/*.rb')
 
 get('/') do
@@ -8,6 +8,6 @@ get('/') do
 end
 
 get('/number_output') do
-  @number_output = params.fetch("string").string_parse("string")
+  @number_output = params.fetch("string").string_parse("happy")
   erb(:number_output)
 end
