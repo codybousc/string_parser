@@ -8,6 +8,6 @@ get('/') do
 end
 
 get('/number_output') do
-  @number_output = params.fetch("string").string_parse("happy")
+  @number_output = params.fetch("sentence").string_parse("word")
   erb(:number_output)
 end
