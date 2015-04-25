@@ -8,6 +8,24 @@ get('/') do
 end
 
 get('/number_output') do
-  @number_output = params.fetch("sentence").string_parse("word")
+  @sentence = params.fetch('sentence')
+  @word = params.fetch('word')
+  sentence = @sentence
+  word = @word
+  @result = sentence.string_parse(word)
   erb(:number_output)
 end
+
+
+=begin
+This did not work:
+get('/number_output') do
+@sentence = params.fetch('sentence')
+@word = params.fetch('word')
+  @result = @sentence.string_parse(@word)
+  erb(:number_output)
+end
+
+I had to reset the sentence and word variables to make it work. I'm not sure why.
+
+=end
