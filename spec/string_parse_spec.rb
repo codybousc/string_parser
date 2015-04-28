@@ -6,6 +6,6 @@ describe('String#string_sparse') do
     expect(("I'm happy").string_parse("happy")).to(eq(1))
   end
   it ('returns the quantity of times that a given word occurs in a user provided string') do
-    expect(("This day is a great day").string_parse("day")).to(eq(2))
+    expect(("This day is a great").string_parse("day")).to(eq(1))
   end
 end
