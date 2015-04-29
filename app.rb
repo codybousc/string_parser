@@ -10,10 +10,8 @@ get('/') do
 end
 
 get('/number_output') do
-  @sentence = params.fetch('sentence')
-  @word = params.fetch('word')
-  sentence = @sentence
-  word = @word
+  sentence = params.fetch('sentence')
+  word = params.fetch('word')
   @result = sentence.string_parse(word)
   erb(:number_output)
 end
